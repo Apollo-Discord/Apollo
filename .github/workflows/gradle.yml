@@ -1,5 +1,21 @@
-            - name: Build with Gradle
-  # You may pin to the exact commit or the version.
-  # uses: gradle/actions@0bdd871935719febd78681f197cd39af5b6e16a6
-  uses: gradle/actions@v4.2.2
-          
+name: Java CI
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  gradle:
+  
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v3
+    - name: Set up JDK 21
+      uses: gradle/actions@v4.2.2
+      with:
+        distribution: temurin
+        java-version: 21
+    - name: Build with Gradle
+      run: ./gradlew build
