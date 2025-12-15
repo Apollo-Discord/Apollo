@@ -21,7 +21,7 @@ repositories {
 
 dependencies {
     //Logging
-    implementation("ch.qos.logback:logback-classic:1.5.17")
+    implementation("ch.qos.logback:logback-classic:1.5.22")
 
     //JDA
     implementation("club.minnced:jda-ktx:0.12.0")
