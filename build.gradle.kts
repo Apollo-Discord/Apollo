@@ -24,7 +24,7 @@ dependencies {
     implementation("ch.qos.logback:logback-classic:1.5.17")
 
     //JDA
-    implementation("club.minnced:jda-ktx:0.12.0")
+    implementation("club.minnced:jda-ktx:0.14.1")
 }
 
 tasks.withType<JavaCompile> {
